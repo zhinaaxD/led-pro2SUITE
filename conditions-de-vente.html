@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales de Vente - LEDPRO</title>
+    <meta name="description" content="Conditions générales de vente de LEDPRO, votre expert en éclairage LED professionnel.">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Critical CSS -->
+    <style>
+        .logo-text {
+            font-weight: 900;
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .logo-text:hover {
+            color: #4B72FF;
+        }
+        .logo-text span {
+            color: #4B72FF;
+        }
+        .main-header {
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+        }
+        .nav-link {
+            color: #4a5568;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #4B72FF;
+        }
+        .promo-button {
+            background-color: #10B981;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .promo-button:hover {
+            background-color: #0D9668;
+        }
+        [x-cloak] { display: none !important; }
+        
+        .logo-container .logo-text {
+            font-weight: 900 !important;
+            font-size: 2.8rem !important;
+            letter-spacing: -1px !important;
+            background: linear-gradient(135deg, 
+                #10f0a0 0%,
+                #0a9463 50%,
+                #064e3b 100%
+            ) !important;
+            background-size: 100% 100% !important;
+            background-clip: text !important;
+            -webkit-background-clip: text !important;
+            color: transparent !important;
+            display: inline-block !important;
+            position: relative !important;
+            text-decoration: none !important;
+        }
+
+        .logo-container .logo-text span {
+            color: transparent !important;
+            background: inherit !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+        }
+    </style>
+    
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50" x-data="{ mobileMenuOpen: false }">
+    <div class="flex flex-col min-h-screen">
+        <!-- Top Info Bar -->
+        <div class="bg-gray-900 text-white py-2">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center divide-x divide-gray-700/30">
+                        <a href="tel:+33123456789" class="text-sm hover:text-blue-400 transition-colors flex items-center pr-6 text-gray-200">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            +33 1 23 45 67 89
+                        </a>
+                        <span class="text-sm text-green-400 flex items-center px-6">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+                            Livraison gratuite dès 5000€
+                        </span>
+                        <span class="text-sm text-blue-400 flex items-center pl-6">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Votre expert LED depuis plus de 15 ans
+                        </span>
+                    </div>
+                    <div>
+                        <a href="/catalogue" class="text-sm hover:text-blue-400 transition-colors flex items-center text-gray-200">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            Catalogue
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <nav class="main-header">
+            <div class="max-w-7xl mx-auto">
+                <div class="header-container">
+                    <div class="flex items-center flex-1">
+                        <!-- Logo -->
+                        <div class="logo-container">
+                            <a href="/" class="logo-text">LEDPRO</a>
+                        </div>
+                        <!-- Navigation -->
+                        <div class="nav-links hidden lg:flex">
+                            <a href="/projecteurs" class="nav-link">Projecteurs</a>
+                            <a href="/rubans-led" class="nav-link">Rubans LED</a>
+                            <a href="/plafonniers" class="nav-link">Plafonniers</a>
+                            <a href="/reglettes" class="nav-link">Réglettes</a>
+                            <a href="/electrique" class="nav-link">Électrique</a>
+                            <a href="/domes" class="nav-link">Dômes</a>
+                        </div>
+                    </div>
+                    <!-- Promotions Button -->
+                    <div class="flex items-center">
+                        <div class="promo-button-wrapper">
+                            <a href="/promotions" class="promo-button">Promotions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <div class="bg-gray-100 py-12">
+                <div class="container mx-auto px-4">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-8">Conditions Générales de Vente</h1>
+                    <p class="text-gray-600 mb-4">Dernière mise à jour : 31 décembre 2024</p>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="container mx-auto px-4 py-12">
+                <div class="prose max-w-none">
+                    <h2 class="text-2xl font-semibold mb-4">Article 1 - Objet</h2>
+                    <p class="mb-6">Les présentes conditions générales de vente régissent les relations contractuelles entre LEDPRO et ses clients professionnels.</p>
+
+                    <h2 class="text-2xl font-semibold mb-4">Article 2 - Prix</h2>
+                    <p class="mb-6">Les prix sont indiqués en euros hors taxes. La TVA applicable est celle en vigueur au jour de la commande.</p>
+
+                    <h2 class="text-2xl font-semibold mb-4">Article 3 - Commandes</h2>
+                    <p class="mb-6">Toute commande passée sur notre site constitue la formation d'un contrat conclu à distance entre le client et LEDPRO.</p>
+
+                    <h2 class="text-2xl font-semibold mb-4">Article 4 - Livraison</h2>
+                    <p class="mb-6">Les délais de livraison sont donnés à titre indicatif. La livraison est gratuite pour toute commande supérieure à 5000€ HT.</p>
+
+                    <h2 class="text-2xl font-semibold mb-4">Article 5 - Garantie</h2>
+                    <p class="mb-6">Tous nos produits sont garantis selon les conditions spécifiques à chaque gamme de produits.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Contact -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-primary-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                <a href="tel:+33123456789" class="hover:text-white">+33 1 23 45 67 89</a>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-primary-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <a href="mailto:contact@led-pro.fr" class="hover:text-white">contact@led-pro.fr</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/catalogue" class="hover:text-white">Catalogue</a></li>
+                            <li><a href="/promotions" class="hover:text-white">Promotions</a></li>
+                            <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Informations -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Informations</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/mentions-legales" class="hover:text-white">Mentions légales</a></li>
+                            <li><a href="/politique-de-confidentialite" class="hover:text-white">Politique de confidentialité</a></li>
+                            <li><a href="/conditions-de-vente" class="hover:text-white">Conditions de vente</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                        <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos actualités</p>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Votre email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-primary-500">
+                            <button type="submit" class="w-full bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition-colors">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

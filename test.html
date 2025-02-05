@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LED PRO - Votre spécialiste en éclairage professionnel LED">
+    <title>Test Components - LED PRO</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script defer src="./js/components.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <div x-data="siteHeader">
+            <!-- Le header sera chargé ici -->
+        </div>
+        
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold mb-8">Page de test des composants</h1>
+            <p class="text-lg text-gray-600">Cette page permet de tester l'intégration du header et du footer.</p>
+        </main>
+        
+        <!-- Footer -->
+        <div x-data="siteFooter">
+            <!-- Le footer sera chargé ici -->
+        </div>
+    </div>
+</body>
+</html>

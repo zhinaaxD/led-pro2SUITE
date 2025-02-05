@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentions légales - LED PRO. Informations légales concernant notre site web.">
+    <title>Mentions Légales | LED PRO</title>
+    
+    <!-- Performance Optimizations -->
+    <link rel="preload" as="image" href="https://images.pexels.com/photos/1036657/pexels-photo-1036657.jpeg">
+    <link rel="preload" as="image" href="https://images.pexels.com/photos/3681787/pexels-photo-3681787.jpeg">
+    <link rel="preconnect" href="https://images.pexels.com">
+    <link rel="dns-prefetch" href="https://images.pexels.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Critical CSS -->
+    <style>
+        .logo-text {
+            font-weight: 900;
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .logo-text:hover {
+            color: #4B72FF;
+        }
+        .logo-text span {
+            color: #4B72FF;
+        }
+        .main-header {
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+        }
+        .nav-link {
+            color: #4a5568;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #4B72FF;
+        }
+        .promo-button {
+            background-color: #10B981;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .promo-button:hover {
+            background-color: #0D9668;
+        }
+        [x-cloak] { display: none !important; }
+        
+        .logo-container .logo-text {
+            font-weight: 900 !important;
+            font-size: 2.8rem !important;
+            letter-spacing: -1px !important;
+            background: linear-gradient(135deg, 
+                #10f0a0 0%,
+                #0a9463 50%,
+                #064e3b 100%
+            ) !important;
+            background-size: 100% 100% !important;
+            background-clip: text !important;
+            -webkit-background-clip: text !important;
+            color: transparent !important;
+            display: inline-block !important;
+            position: relative !important;
+            text-decoration: none !important;
+        }
+
+        .logo-container .logo-text span {
+            color: transparent !important;
+            background: inherit !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" x-data="{ mobileMenuOpen: false }">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Info Bar -->
+        <div class="bg-gray-900 text-white py-2">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center divide-x divide-gray-700/30">
+                        <a href="tel:+33123456789" class="text-sm hover:text-blue-400 transition-colors flex items-center pr-6 text-gray-200">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            +33 1 23 45 67 89
+                        </a>
+                        <span class="text-sm text-green-400 flex items-center px-6">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+                            Livraison gratuite dès 5000€
+                        </span>
+                        <span class="text-sm text-blue-400 flex items-center pl-6">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Votre expert LED depuis plus de 15 ans
+                        </span>
+                    </div>
+                    <div>
+                        <a href="/catalogue" class="text-sm hover:text-blue-400 transition-colors flex items-center text-gray-200">
+                            <svg class="w-4 h-4 mr-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            Catalogue
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <nav class="main-header">
+            <div class="max-w-7xl mx-auto">
+                <div class="header-container">
+                    <div class="flex items-center flex-1">
+                        <!-- Logo -->
+                        <div class="logo-container">
+                            <a href="/" class="logo-text">LEDPRO</a>
+                        </div>
+                        <!-- Navigation -->
+                        <div class="nav-links hidden lg:flex">
+                            <a href="/projecteurs" class="nav-link">Projecteurs</a>
+                            <a href="/rubans-led" class="nav-link">Rubans LED</a>
+                            <a href="/plafonniers" class="nav-link">Plafonniers</a>
+                            <a href="/reglettes" class="nav-link">Réglettes</a>
+                            <a href="/electrique" class="nav-link">Électrique</a>
+                            <a href="/domes" class="nav-link">Dômes</a>
+                        </div>
+                    </div>
+                    <!-- Promotions Button -->
+                    <div class="flex items-center">
+                        <div class="promo-button-wrapper">
+                            <a href="/promotions" class="promo-button">Promotions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-b from-gray-100 to-white py-12">
+                <div class="container mx-auto px-4">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4 text-center">Mentions Légales</h1>
+                    <p class="text-gray-600 text-center mb-8">Informations légales concernant notre site web</p>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="py-12">
+                <div class="container mx-auto px-4 max-w-4xl">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="space-y-8">
+                            <!-- Section 1 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Informations légales</h2>
+                                <p class="text-gray-600 mb-4">Le site LED PRO est édité par :</p>
+                                <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                    <li>Raison sociale : LED PRO</li>
+                                    <li>Forme juridique : SARL</li>
+                                    <li>Capital social : 50 000€</li>
+                                    <li>Siège social : 123 Rue de l'Éclairage, 75001 Paris</li>
+                                    <li>SIRET : 123 456 789 00001</li>
+                                    <li>TVA Intracommunautaire : FR 12 345678900</li>
+                                </ul>
+                            </div>
+                            <!-- Section 2 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Hébergement</h2>
+                                <p class="text-gray-600">Le site est hébergé par :</p>
+                                <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                    <li>Nom : OVH SAS</li>
+                                    <li>Adresse : 2 rue Kellermann - 59100 Roubaix - France</li>
+                                </ul>
+                            </div>
+                            <!-- Section 3 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Propriété intellectuelle</h2>
+                                <p class="text-gray-600">L'ensemble du contenu du site (textes, images, vidéos, etc.) est protégé par le droit d'auteur. Toute reproduction ou utilisation sans autorisation préalable est interdite.</p>
+                            </div>
+                            <!-- Section 4 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Contact</h2>
+                                <p class="text-gray-600 mb-4">Pour toute question concernant le site, vous pouvez nous contacter :</p>
+                                <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                                    <li>Par téléphone : +33 1 23 45 67 89</li>
+                                    <li>Par email : contact@led-pro.fr</li>
+                                    <li>Par courrier : 123 Rue de l'Éclairage, 75001 Paris</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-300">
+            <!-- Main Footer -->
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- Company Info -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">LED PRO</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Votre partenaire de confiance pour l'éclairage LED professionnel. Nous proposons des solutions innovantes et économiques pour tous vos projets d'éclairage.
+                        </p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-6">Liens Rapides</h4>
+                        <ul class="space-y-4">
+                            <li><a href="/catalogue" class="hover:text-white transition">Catalogue</a></li>
+                            <li><a href="/categories" class="hover:text-white transition">Catégories</a></li>
+                            <li><a href="/promotions" class="hover:text-white transition">Promotions</a></li>
+                            <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-6">Informations Légales</h4>
+                        <ul class="space-y-4">
+                            <li><a href="/mentions-legales" class="hover:text-white transition">Mentions Légales</a></li>
+                            <li><a href="/politique-de-confidentialite" class="hover:text-white transition">Politique de Confidentialité</a></li>
+                            <li><a href="/cgv" class="hover:text-white transition">CGV</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-6">Contact</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-primary-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <span>123 Rue de l'Éclairage<br>75001 Paris, France</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-primary-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                <a href="tel:+33123456789" class="hover:text-white">+33 1 23 45 67 89</a>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-primary-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <a href="mailto:contact@led-pro.fr" class="hover:text-white">contact@led-pro.fr</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800">
+                <div class="container mx-auto px-4 py-6">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p>&copy; 2024 LED PRO. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+    </script>
+</body>
+</html>

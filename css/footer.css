@@ -1,0 +1,103 @@
+/* Styles pour le footer */
+.footer-link {
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 0.5px;
+    background-color: #10f0a0;
+    transition: width 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-link:hover {
+    color: #10f0a0 !important;
+}
+
+/* Effets pour les icônes sociales */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    color: #10f0a0 !important;
+}
+
+/* Animation du bouton newsletter */
+.newsletter-button {
+    transition: all 0.3s ease;
+    background: #10f0a0;
+    transform-origin: center;
+}
+
+.newsletter-button:hover {
+    transform: scale(1.05);
+    background: #0dd088;
+    box-shadow: 0 4px 12px rgba(16, 240, 160, 0.3);
+}
+
+/* Styles pour les liens de contact */
+.contact-link {
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #10f0a0 !important;
+}
+
+.contact-link:hover svg {
+    transform: scale(1.1);
+    color: #10f0a0 !important;
+}
+
+/* Styles pour le conteneur du footer */
+.footer-container {
+    background-color: #121318;
+    color: #ffffff;
+}
+
+/* Newsletter Input */
+.newsletter-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #10f0a0;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(16, 240, 160, 0.2);
+}
+
+/* Footer Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

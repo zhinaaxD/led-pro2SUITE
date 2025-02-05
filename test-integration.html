@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LED PRO - Page de test pour l'intégration des nouveaux composants">
+    <title>Test Intégration - LED PRO</title>
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.13.3/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.13.3/dist/cdn.min.js"></script>
+    <script defer src="./js/components.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <div x-data="{ mobileMenuOpen: false }">
+            <!-- Inclure le contenu de test-header.html -->
+            <div id="header-content"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Page de Test - Intégration</h1>
+                <p class="text-lg text-gray-600 mb-4">
+                    Cette page sert à tester l'intégration des nouveaux composants header et footer.
+                </p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h2 class="font-semibold text-blue-800">Test du Header</h2>
+                        <ul class="list-disc list-inside text-blue-600 mt-2">
+                            <li>Navigation responsive</li>
+                            <li>Animations des boutons</li>
+                            <li>Menu mobile</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-green-50 rounded-lg">
+                        <h2 class="font-semibold text-green-800">Test du Footer</h2>
+                        <ul class="list-disc list-inside text-green-600 mt-2">
+                            <li>Liens de navigation</li>
+                            <li>Formulaire newsletter</li>
+                            <li>Liens sociaux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <div>
+            <!-- Inclure le contenu de test-footer.html -->
+            <div id="footer-content"></div>
+        </div>
+    </div>
+
+    <!-- Script pour charger les composants -->
+    <script>
+        // Fonction pour charger le contenu des composants
+        async function loadComponent(url, targetId) {
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                // Extraire le contenu entre les balises body
+                const bodyContent = html.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
+                document.getElementById(targetId).innerHTML = bodyContent;
+            } catch (error) {
+                console.error(`Erreur lors du chargement de ${url}:`, error);
+            }
+        }
+
+        // Charger les composants au chargement de la page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('test-header.html', 'header-content');
+            loadComponent('test-footer.html', 'footer-content');
+        });
+    </script>
+</body>
+</html>

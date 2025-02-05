@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LED PRO - Votre partenaire en solutions d'éclairage LED professionnelles. Distributeur officiel V-TAC, nous proposons une large gamme de produits LED pour les professionnels et grossistes.">
+  <meta name="keywords" content="LED, éclairage professionnel, V-TAC, LED PRO, grossiste LED, luminaires, éclairage commercial, éclairage industriel">
+  <meta name="author" content="LED PRO">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="LED PRO - Éclairage LED Professionnel">
+  <meta property="og:description" content="Solutions d'éclairage LED professionnelles pour entreprises et grossistes. Distributeur officiel V-TAC.">
+  <meta property="og:type" content="website">
+  <title>LED PRO - Éclairage LED Professionnel</title>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Performance Optimizations -->
+  <link rel="preload" as="image" href="https://images.pexels.com/photos/1036657/pexels-photo-1036657.jpeg">
+  <link rel="preload" as="image" href="https://images.pexels.com/photos/3681787/pexels-photo-3681787.jpeg">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" as="image" href="./images/hero/hero-1.jpg">
+  <link rel="preload" as="image" href="./images/hero/hero-2.jpg">
+  <link rel="preload" as="image" href="./images/hero/hero-3.jpg">
+  <!-- Critical CSS -->
+  <style>
+    .logo-text {
+      font-weight: 900;
+      font-size: 2.8rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .logo-text:hover {
+      color: #4B72FF;
+    }
+    .logo-text span {
+      color: #4B72FF;
+    }
+    .main-header {
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+    }
+    .nav-link {
+      color: #4a5568;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #4B72FF;
+    }
+    .promo-button {
+      background-color: #10B981;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .promo-button:hover {
+      background-color: #0D9668;
+    }
+    [x-cloak] { display: none !important; }
+    .logo-container .logo-text {
+      font-weight: 900 !important;
+      font-size: 2.8rem !important;
+      letter-spacing: -1px !important;
+      background: linear-gradient(135deg, #10f0a0 0%, #0a9463 50%, #064e3b 100%) !important;
+      background-size: 100% 100% !important;
+      background-clip: text !important;
+      -webkit-background-clip: text !important;
+      color: transparent !important;
+      display: inline-block !important;
+      position: relative !important;
+      text-decoration: none !important;
+    }
+    .logo-container .logo-text span {
+      color: transparent !important;
+      background: inherit !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+    }
+  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-50" x-data="{ mobileMenuOpen: false }">
+  <div class="min-h-screen flex flex-col">
+    <!-- Début Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <nav class="main-header">
+        <div class="max-w-7xl mx-auto">
+          <div class="header-container">
+            <div class="flex items-center flex-1">
+              <!-- Logo -->
+              <div class="logo-container">
+                <a href="/" class="logo-text">LEDPRO</a>
+              </div>
+              <!-- Navigation -->
+              <div class="nav-links hidden lg:flex">
+                <a href="/projecteurs" class="nav-link">Projecteurs</a>
+                <a href="/rubans-led" class="nav-link">Rubans LED</a>
+                <a href="/plafonniers" class="nav-link">Plafonniers</a>
+                <a href="/reglettes" class="nav-link">Réglettes</a>
+                <a href="/electrique" class="nav-link">Électrique</a>
+                <a href="/domes" class="nav-link">Dômes</a>
+              </div>
+            </div>
+            <!-- Promotions Button -->
+            <div class="flex items-center">
+              <div class="promo-button-wrapper">
+                <a href="/promotions" class="promo-button">Promotions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Slider Section -->
+        <section 
+          x-data="heroSlider"
+          class="relative h-[85vh] overflow-hidden bg-gray-900">
+          <!-- Slides Container -->
+          <div class="relative h-full">
+            <template x-for="(slide, index) in slides" :key="index">
+              <div 
+                x-show="currentSlide === index"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="absolute inset-0">
+                <!-- Background Image -->
+                <img 
+                  :src="slide.image" 
+                  :alt="'Image représentant ' + slide.title"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="absolute inset-0 w-full h-full object-cover" />
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <!-- Content -->
+                <div class="relative h-full flex items-center">
+                  <div class="container mx-auto px-4">
+                    <div class="max-w-3xl text-white">
+                      <h1 
+                        x-text="slide.title"
+                        class="text-5xl md:text-6xl font-bold mb-4"></h1>
+                      <p 
+                        x-text="slide.subtitle"
+                        class="text-xl md:text-2xl mb-8"></p>
+                      <a 
+                        :href="slide.link"
+                        x-text="slide.cta"
+                        class="inline-block bg-teal-800 hover:bg-teal-900 text-white font-medium px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        Télécharger le catalogue
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <!-- Slider Controls -->
+            <button 
+              @click="prevSlide()"
+              aria-label="Voir le slide précédent"
+              class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-4 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500">
+              ←
+            </button>
+            <button 
+              @click="nextSlide()"
+              aria-label="Voir le slide suivant"
+              class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-4 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500">
+              →
+            </button>
+          </div>
+        </section>
+        <!-- Bestsellers Section -->
+        <section id="bestsellers" class="py-20 bg-gray-50"
+          x-data="{ 
+            currentSlide: 0,
+            slides: [
+              [0, 1, 2, 3],
+              [4, 5, 6, 7],
+              [8, 9, 10, 11]
+            ],
+            products: [
+              {
+                name: 'Projecteur LED Pro X500',
+                specs: 'IP66 - 60000lm',
+                image: 'https://images.pexels.com/photos/3681787/pexels-photo-3681787.jpeg',
+                link: '/produits/projecteur-led-pro-x500'
+              },
+              {
+                name: 'Dalle LED Premium 60x60',
+                specs: 'UGR<19 - 4000K',
+                image: 'https://images.pexels.com/photos/5691650/pexels-photo-5691650.jpeg',
+                link: '/produits/dalle-led-premium-60x60'
+              },
+              {
+                name: 'Ruban LED Pro 24V',
+                specs: 'IP67 - 19.2W/m',
+                image: 'https://images.pexels.com/photos/5691665/pexels-photo-5691665.jpeg',
+                link: '/produits/ruban-led-pro-24v'
+              },
+              {
+                name: 'Suspension LED UFO',
+                specs: 'IP65 - 26000lm',
+                image: 'https://images.pexels.com/photos/236698/pexels-photo-236698.jpeg',
+                link: '/produits/suspension-led-industrielle-ufo'
+              },
+              {
+                name: 'Projecteur LED Slim 300W',
+                specs: 'IP65 - 45000lm',
+                image: 'https://images.pexels.com/photos/1036657/pexels-photo-1036657.jpeg',
+                link: '/produits/projecteur-led-slim-300w'
+              },
+              {
+                name: 'Dalle LED Pro 120x30',
+                specs: 'UGR<16 - 5000K',
+                image: 'https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg',
+                link: '/produits/dalle-led-pro-120x30'
+              },
+              {
+                name: 'Ruban LED RGBW',
+                specs: 'IP68 - 23W/m',
+                image: 'https://images.pexels.com/photos/963436/pexels-photo-963436.jpeg',
+                link: '/produits/ruban-led-rgbw'
+              },
+              {
+                name: 'Suspension LED Linéaire',
+                specs: 'IP44 - 19500lm',
+                image: 'https://images.pexels.com/photos/5691699/pexels-photo-5691699.jpeg',
+                link: '/produits/suspension-led-lineaire'
+              },
+              {
+                name: 'Projecteur LED Stadium',
+                specs: 'IP67 - 104000lm',
+                image: 'https://images.pexels.com/photos/1738434/pexels-photo-1738434.jpeg',
+                link: '/produits/projecteur-led-stadium'
+              },
+              {
+                name: 'Dalle LED Backlit',
+                specs: 'UGR<17 - 3000K',
+                image: 'https://images.pexels.com/photos/5691634/pexels-photo-5691634.jpeg',
+                link: '/produits/dalle-led-backlit'
+              },
+              {
+                name: 'Ruban LED COB',
+                specs: 'IP20 - 15W/m',
+                image: 'https://images.pexels.com/photos/5691665/pexels-photo-5691665.jpeg',
+                link: '/produits/ruban-led-cob'
+              },
+              {
+                name: 'Suspension LED Design',
+                specs: 'IP20 - 4550lm',
+                image: 'https://images.pexels.com/photos/236698/pexels-photo-236698.jpeg',
+                link: '/produits/suspension-led-design'
+              }
+            ],
+            nextSlide() {
+              this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+            },
+            prevSlide() {
+              this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+            }
+          }"
+          @keydown.right.window="nextSlide"
+          @keydown.left.window="prevSlide">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+              <h2 class="text-4xl font-bold text-gray-900 mb-4">Nos Meilleures Ventes</h2>
+              <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Découvrez notre sélection de produits LED plébiscités par nos clients professionnels
+              </p>
+            </div>
+            <div class="relative" x-data="{ isHovered: false }" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
+              <!-- Previous Button -->
+              <button @click="prevSlide" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
+                :class="{ 'opacity-0': !isHovered, 'opacity-100': isHovered }">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </button>
+              <!-- Slides Container -->
+              <div class="overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-out"
+                     :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+                  <template x-for="slide in slides" :key="slide">
+                    <div class="w-full flex-none">
+                      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
+                        <template x-for="productIndex in slide" :key="productIndex">
+                          <div class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                            <a :href="products[productIndex].link" class="block">
+                              <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+                                <img :src="products[productIndex].image" 
+                                     :alt="products[productIndex].name" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                              </div>
+                              <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" x-text="products[productIndex].name"></h3>
+                                <p class="text-gray-600" x-text="products[productIndex].specs"></p>
+                              </div>
+                            </a>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <!-- Next Button -->
+              <button @click="nextSlide" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
+                :class="{ 'opacity-0': !isHovered, 'opacity-100': isHovered }">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+              <!-- Dots Navigation -->
+              <div class="flex justify-center mt-8 space-x-2">
+                <template x-for="(slide, index) in slides" :key="index">
+                  <button @click="currentSlide = index"
+                          class="w-3 h-3 rounded-full transition-all duration-300"
+                          :class="{ 'bg-primary-500': currentSlide === index, 'bg-gray-300': currentSlide !== index }">
+                  </button>
+                </template>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Catalogue Section -->
+        <section id="catalogue" class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="container mx-auto px-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Image -->
+                <div class="catalogue-card rounded-2xl shadow-2xl mt-8" data-aos="fade-right">
+                  <a href="https://view.publitas.com/49187/1685087/pdfs/3cbcbdbb-a1fe-4c10-ad6c-3c21b41832e6.pdf?response-content-disposition=attachment%3B+filename%2A%3DUTF-8%27%27VTAC%2520-%2520V-TAC%2520Catalogue%2520Interactive%2520Version%2520Q2-2024.pdf" class="relative h-[650px] rounded-2xl overflow-hidden block transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/catalogue/catalogue-cover-2024.png" 
+                         alt="Catalogue LED PRO 2024" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 text-white">
+                      <h3 class="text-3xl font-bold mb-4">Catalogue LED PRO 2024</h3>
+                      <p class="text-lg mb-6">Découvrez notre gamme complète de solutions d'éclairage LED professionnelles. Plus de 500 produits avec fiches techniques détaillées.</p>
+                      <ul class="space-y-2">
+                        <li class="flex items-center">
+                          <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          Fiches techniques complètes
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          Prix et stocks en temps réel
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          Guides d'installation
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!-- Right Column - Form -->
+                <div class="lg:pl-12" data-aos="fade-left">
+                  <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="text-center mb-8">
+                      <h3 class="text-2xl font-bold text-gray-900 mb-2">Contactez nous</h3>
+                      <p class="text-gray-600">Remplissez le formulaire pour toutes demandes d'informations, devis, partenariats</p>
+                    </div>
+                    <form class="space-y-6">
+                      <div class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label for="firstname" class="block text-sm font-medium text-gray-700 mb-1">Prénom</label>
+                            <input type="text" id="firstname" name="firstname" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" required>
+                          </div>
+                          <div>
+                            <label for="lastname" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                            <input type="text" id="lastname" name="lastname" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" required>
+                          </div>
+                        </div>
+                        <div>
+                          <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
+                          <input type="text" id="company" name="company" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" required>
+                        </div>
+                        <div>
+                          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email professionnel</label>
+                          <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" required>
+                        </div>
+                        <div>
+                          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
+                          <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" required>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input type="checkbox" id="consent" name="consent" class="h-4 w-4 text-primary border-gray-300 rounded" required>
+                        </div>
+                        <div class="ml-3">
+                          <label for="consent" class="text-sm text-gray-600">J'accepte de recevoir des informations commerciales de LED PRO</label>
+                        </div>
+                      </div>
+                      <button type="submit" class="download-button w-full bg-teal-800 text-white py-3 px-4 rounded-md hover:bg-teal-900 transition-colors flex items-center justify-center space-x-2">
+                        <span>Contactez nous</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                      </button>
+                      <p class="text-xs text-gray-500 text-center mt-4">
+                        Vos données sont traitées conformément à notre politique de confidentialité. Vous pouvez vous désinscrire à tout moment.
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-[#121318] text-gray-300">
+          <div class="container mx-auto py-16 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+              <!-- Section LED PRO -->
+              <div>
+                <h2 class="text-3xl font-bold text-white mb-4">LED PRO</h2>
+                <p class="text-gray-400 mb-8 leading-relaxed text-base">
+                  Votre partenaire de confiance pour toutes vos solutions d'éclairage LED professionnel. Innovation, qualité et service depuis plus de 10 ans.
+                </p>
+                <div class="flex space-x-4">
+                  <a href="#" class="social-icon text-gray-400 hover:text-white">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                    </svg>
+                  </a>
+                  <a href="#" class="social-icon text-gray-400 hover:text-white">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- Section Liens Rapides -->
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Liens Rapides</h3>
+                <ul class="space-y-3">
+                  <li><a href="/catalogue" class="footer-link text-base text-gray-400 hover:text-white">Catalogue</a></li>
+                  <li><a href="/categories" class="footer-link text-base text-gray-400 hover:text-white">Catégories</a></li>
+                  <li><a href="/promotions" class="footer-link text-base text-gray-400 hover:text-white">Promotions</a></li>
+                </ul>
+              </div>
+              <!-- Section Informations -->
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Informations</h3>
+                <ul class="space-y-3">
+                  <li><a href="/cgv.html" class="footer-link text-base text-gray-400 hover:text-white">Conditions Générales de Vente</a></li>
+                  <li><a href="/mentions-legales.html" class="footer-link text-base text-gray-400 hover:text-white">Mentions Légales</a></li>
+                  <li><a href="/politique-de-confidentialite.html" class="footer-link text-base text-gray-400 hover:text-white">Politique de Confidentialité</a></li>
+                </ul>
+              </div>
+              <!-- Section Contact -->
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+                <p class="text-gray-400 text-base">Adresse, téléphone, email, etc.</p>
+              </div>
+            </div>
+          </div>
+          <div class="container mx-auto py-8 px-4 border-t border-gray-700">
+            <p class="text-center text-gray-500 text-sm"> 2025 LED PRO. Tous droits réservés.</p>
+          </div>
+        </footer>
+      </div>
+    </body>
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('heroSlider', () => ({
+          currentSlide: 0,
+          slides: [
+            {
+              title: "Solutions LED Professionnelles",
+              subtitle: "Éclairage haute performance pour tous vos projets",
+              image: './images/hero/hero-1.jpg',
+              link: "/catalogue",
+              cta: "Découvrir notre catalogue"
+            },
+            {
+              title: "Gamme V-TAC Premium",
+              subtitle: "La qualité professionnelle à prix grossiste",
+              image: './images/hero/hero-2.jpg',
+              link: "/promotions",
+              cta: "Voir les promotions"
+            },
+            {
+              title: "Accompagnement Projet",
+              subtitle: "Nos experts vous conseillent",
+              image: './images/hero/hero-3.jpg',
+              link: "/contact",
+              cta: "Nous contacter"
+            }
+          ],
+          init() {
+            console.log('Slider initialisé avec', this.slides.length, 'slides');
+          },
+          nextSlide() {
+            this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+          },
+          prevSlide() {
+            this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+          }
+        }));
+      });
+    </script>
+  </html>
