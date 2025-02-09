@@ -12,8 +12,9 @@
     "@alpinejs/collapse": "^3.13.3",
     "@alpinejs/intersect": "^3.13.3",
     "alpinejs": "^3.13.3",
+    "flowbite": "^2.2.1",
     "gsap": "^3.12.4",
-    "flowbite": "^2.2.1"
+    "qrcode": "^1.5.4"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
